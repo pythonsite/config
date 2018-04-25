@@ -56,7 +56,6 @@ func (c *Config) reload(){
 				return
 			}
 			curModifyTime := fileInfo.ModTime().Unix()
-			fmt.Printf("%v --- %v\n",curModifyTime,c.lastModifyTime)
 			if curModifyTime > c.lastModifyTime{
 				m,err := c.parse()
 				if err != nil{
